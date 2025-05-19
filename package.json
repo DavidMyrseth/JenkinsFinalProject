@@ -1,0 +1,12 @@
+{
+  "name": "my-travel-app",
+  "version": "1.0.0",
+  "description": "Приложение для возврата любимого места для путешествий",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
