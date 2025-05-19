@@ -2,17 +2,12 @@ pipeline {
     agent any 
 
     stages {
-        stage('Build') {
+        stage('app') {
             steps {
                 script {
-                    sh 'docker build -t jenkins .'
-                }
-            }
-        }
-        stage('Run') {
-            steps {
-                script {
-                    sh 'docker run -p 3000:3000 jenkins'
+                    sh "npm i"
+                    sh "docker build -t express ."
+                    sh 'docker run -d -p 3000:3000 express'
                 }
             }
         }
